@@ -1,0 +1,48 @@
+url : http://localhost:9000/graphql.php?query={user(id:5){id,name,email}}
+url : http://localhost:9000/graphql.php
+
+Testing : GraphQL Feen
+query = 
+{
+  user(id: 5) {
+    id
+    name
+    email
+  }
+  product(id: 10) {
+    id
+    name
+    url_thumbnail
+    images {
+      id
+      url
+    }
+    reviews {
+      message
+      star
+      user {
+        name
+        id
+      }
+    }
+  }
+  products(limit: 5) {
+    id
+    slug
+    name
+    weight
+    price
+  }
+  productCategories {
+    id
+    slug
+    name
+    products(limit: 3) {
+      id
+      name
+      slug
+    }
+  }
+}
+
+
